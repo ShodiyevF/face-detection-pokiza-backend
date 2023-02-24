@@ -1,0 +1,17 @@
+{
+    "watch": [
+        "src",
+        ".env",
+        ".env.example",
+        ".env.development.local",
+        "swagger.yaml",
+        "*.json",
+        "*.sqlite"
+    ],
+    "ext": "js,ts,json,html,css",
+    "ignore": [
+        "src/logs/*",
+        "src/**/*.{spec,test}.ts"
+    ],
+    "exec": "ts-node -r tsconfig-paths/register --transpile-only src/server.ts"
+}

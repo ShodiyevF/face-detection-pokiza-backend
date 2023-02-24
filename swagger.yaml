@@ -1,0 +1,231 @@
+openapi: 3.0.0
+info:
+  title: Starter-Kit
+  description: 
+    Starter Kit Rest API docs
+  version: 1.0.0
+
+tags:
+- name: users
+  description: users API
+
+paths:
+# [GET] users
+  /users:
+    get:
+      tags:
+      - users
+      summary: Find All Users
+      responses:
+        '200':
+          description: Sucessfull response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+        'x-*':
+          description: Error response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+# [POST] users
+    post:
+      tags:
+      - users
+      summary: Add User
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+                type: object
+                required:
+                  - email
+                  - password
+                  - fullName
+                properties:
+                  email:
+                    type: string
+                    example: johndoe@email.com
+                    format: email
+                    maxLength: 100
+                    description: email is unique
+                  password:
+                    type: string
+                    example: user123
+                    format: password 
+                    maxLength: 16
+                  fullName:
+                    type: string
+                    example: John Doe
+                    format: firstname and lastname 
+                    maxLength: 100
+      responses:
+        201:
+          description: 'Created'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+        'x-*':
+          description: Error response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+# [GET] users/userId
+  /users/{userId}:
+    get:
+      tags:
+      - users
+      summary: Find User By Id
+      parameters:
+      - name: userId
+        in: path
+        description: User Id
+        required: true
+        schema:
+          type: number
+      responses:
+        '200':
+          description: Sucessfull response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+        'x-*':
+          description: Error response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+# [PUT] users/userId
+    put:
+      tags:
+      - users
+      summary: Update User By Id
+      parameters:
+      - name: userId
+        in: path
+        description: user Id
+        required: true
+        schema:
+          type: number
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+                type: object
+                properties:
+                  email:
+                    type: string
+                    example: johndoe@email.com
+                    format: email
+                    maxLength: 100
+                    description: email is unique
+                  password:
+                    type: string
+                    example: user123
+                    format: password 
+                    maxLength: 16
+                  fullName:
+                    type: string
+                    example: John Doe
+                    format: firstname and lastname 
+                    maxLength: 100
+      responses:
+        '200':
+          description: Sucessfull response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+        'x-*':
+          description: Error response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+# [DELETE] users/userId
+    delete:
+      tags:
+      - users
+      summary: Delete User By Id
+      parameters:
+      - name: userId
+        in: path
+        description: user Id
+        required: true
+        schema:
+          type: integer
+      responses:
+        '200':
+          description: Sucessfull response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+        'x-*':
+          description: Error response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+# definitions
+components:
+  schemas:
+    User:
+      type: object
+      required:
+          - email
+          - fullName
+          - createdAt
+      properties:
+        email:
+          type: string
+          description: user Email
+        fullName:
+          type: string
+          description: user FullName
+        createdAt:
+          type: string
+          description: user CreatedAt
+    ErrorResponse:
+        type: object
+        properties:
+          status: 
+            type: integer
+            example: 400
+            enum:
+              - 400
+              - 401
+              - 404
+              - 403
+              - 500
+          message:
+            type: string
+            example: User not found!
+          error:
+            type: string
+            enum:
+              - BAD_REQUEST_ERROR
+              - INTERNAL_ERROR
+              - VALIDATION_ERROR
+              - USER_NOT_EXISTS
+              - EMPTY_BODY_ERROR
+              - EMAIL_ALREADY_EXISTS
+              - WRONG_PASSWORD
+              - INVALID_EMAIL_ADDRESS
+              - INVALID_TOKEN
+              - FORBIDDEN_ERROR
+              - UNAUTHORIZED
+              - BAD_INPUT_ERROR
+              - TOKEN_EXPIRED
+              - TOKEN_REVOKED

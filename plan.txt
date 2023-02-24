@@ -1,0 +1,16 @@
+Controllers - CRUD API
+
+GET    -> Controllers list 
+POST   -> Add controller
+PATCH  -> Change Controller info
+DELETE -> Delete Controller
+
+DELETE -> 
+
+
+Authentication
+* Reset Password
+
+GET: /users/forget-password {email}
+GET: /users/recover-password?token=shjdgfsjhkdfskdjhsdfs
+
