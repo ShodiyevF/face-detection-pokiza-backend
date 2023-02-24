@@ -1704,9 +1704,9 @@
     "type-is" "^1.6.12"
 
 "http-cache-semantics@^4.1.0":
-  "integrity" "sha512-carPklcUh7ROWRK7Cv27RPtdhYhUsela/ue5/jKzjegVvXDqM2ILE9Q2BGn9JZJh1g87cp56su/FgQSzcWS8cQ=="
-  "resolved" "https://registry.npmjs.org/http-cache-semantics/-/http-cache-semantics-4.1.0.tgz"
-  "version" "4.1.0"
+  "integrity" "sha512-er295DKPVsV82j5kw1Gjt+ADA/XYHsajl82cGNQG2eyoPkvgUhX+nDIyelzhIWbbsXP39EHcI6l5tYs2FYqYXQ=="
+  "resolved" "https://registry.npmjs.org/http-cache-semantics/-/http-cache-semantics-4.1.1.tgz"
+  "version" "4.1.1"
 
 "http-errors@2.0.0":
   "integrity" "sha512-FtwrG/euBzaEjYeRqOgly7G0qviiXoJWnvEH2Z1plBdXgbyjv34pHTSb9zoeHMyDy33+DWy5Wt9Wo+TURtOYSQ=="
@@ -1736,19 +1736,6 @@
     "@tootallnate/once" "2"
     "agent-base" "6"
     "debug" "4"
-
-"httpntlm@1.6.1":
-  "integrity" "sha512-Tcz3Ct9efvNqw3QdTl3h6IgRRlIQxwKkJELN/aAIGnzi2xvb3pDHdnMs8BrxWLV6OoT4DlVyhzSVhFt/tk0lIw=="
-  "resolved" "https://registry.npmjs.org/httpntlm/-/httpntlm-1.6.1.tgz"
-  "version" "1.6.1"
-  dependencies:
-    "httpreq" ">=0.4.22"
-    "underscore" "~1.7.0"
-
-"httpreq@>=0.4.22":
-  "integrity" "sha512-2Jm+x9WkExDOeFRrdBCBSpLPT5SokTcRHkunV3pjKmX/cx6av8zQ0WtHUMDrYb6O4hBFzNU6sxJEypvRUVYKnw=="
-  "resolved" "https://registry.npmjs.org/httpreq/-/httpreq-0.5.2.tgz"
-  "version" "0.5.2"
 
 "https-proxy-agent@^5.0.0":
   "integrity" "sha512-dFcAjpTQFgoLMzC2VwU+C/CbS7uRL0lWmxDITmqm7C+7F0Odmj6s9l6alZc6AELXhrnggM2CeWSXHGOdX2YtwA=="
@@ -2433,31 +2420,31 @@
     "tar" "^6.1.2"
     "which" "^2.0.2"
 
-"nodemailer-fetch@1.6.0":
-  "integrity" "sha512-P7S5CEVGAmDrrpn351aXOLYs1R/7fD5NamfMCHyi6WIkbjS2eeZUB/TkuvpOQr0bvRZicVqo59+8wbhR3yrJbQ=="
-  "resolved" "https://registry.npmjs.org/nodemailer-fetch/-/nodemailer-fetch-1.6.0.tgz"
-  "version" "1.6.0"
+"nodemailer-fetch@1.3.0":
+  "integrity" "sha512-5P5+lR0+sWvk1UZGFoTida33dG0xAqk1Pv0t7cPlrJ09dLdZWh/kenxb0vOoUoNVOci4gmSYOnMHzvheSBeFag=="
+  "resolved" "https://registry.npmjs.org/nodemailer-fetch/-/nodemailer-fetch-1.3.0.tgz"
+  "version" "1.3.0"
 
-"nodemailer-shared@1.1.0":
-  "integrity" "sha512-68xW5LSyPWv8R0GLm6veAvm7E+XFXkVgvE3FW0FGxNMMZqMkPFeGDVALfR1DPdSfcoO36PnW7q5AAOgFImEZGg=="
-  "resolved" "https://registry.npmjs.org/nodemailer-shared/-/nodemailer-shared-1.1.0.tgz"
-  "version" "1.1.0"
+"nodemailer-shared@1.0.4":
+  "integrity" "sha512-tfqdDPbj6L3PywhNqCa988bDxxnffo3Gw0DZkaYwOYVsnMZFgF7LoffS4FAFbiGb1M+mcNBPX/Vy9l0A95fJAg=="
+  "resolved" "https://registry.npmjs.org/nodemailer-shared/-/nodemailer-shared-1.0.4.tgz"
+  "version" "1.0.4"
   dependencies:
-    "nodemailer-fetch" "1.6.0"
+    "nodemailer-fetch" "1.3.0"
 
-"nodemailer-smtp-transport@^2.7.4":
-  "integrity" "sha512-1e86YhJ633OZWk3OHWS5TpuoYXG/LtY2/RzNiB5+EkFifDdqHCNHBnExd5cobx0ZSHJLNGM8EKnDuHRFIjFi6Q=="
-  "resolved" "https://registry.npmjs.org/nodemailer-smtp-transport/-/nodemailer-smtp-transport-2.7.4.tgz"
-  "version" "2.7.4"
+"nodemailer-smtp-transport@^2.4.2":
+  "integrity" "sha512-VD3oQ5Xzgszg+2f0H3qAnXhciF6pZ9j2hHNaJqHEzh+caEs/cU1dDmCbpdN2bJxPYBeCilA2XshhtEnvxJgZGQ=="
+  "resolved" "https://registry.npmjs.org/nodemailer-smtp-transport/-/nodemailer-smtp-transport-2.4.2.tgz"
+  "version" "2.4.2"
   dependencies:
-    "nodemailer-shared" "1.1.0"
-    "nodemailer-wellknown" "0.1.10"
-    "smtp-connection" "2.12.0"
+    "nodemailer-shared" "1.0.4"
+    "nodemailer-wellknown" "0.1.8"
+    "smtp-connection" "2.3.2"
 
-"nodemailer-wellknown@0.1.10":
-  "integrity" "sha512-/VV4mjAEjfm2fn0loUvrpjvugw5rgurNjPO4WU24CuVSoeumsyLOTgaEWG8WoGdPxh1biOAp5JxDoy1hlA2zsw=="
-  "resolved" "https://registry.npmjs.org/nodemailer-wellknown/-/nodemailer-wellknown-0.1.10.tgz"
-  "version" "0.1.10"
+"nodemailer-wellknown@0.1.8":
+  "integrity" "sha512-kxDRGWY6ZYtcKsCr4IMw5B9nST0EKK8Ay/JjgK96lBEdpt6nRl2ds5khTVv/BGLECbLIAzOsmIwP7KUt1C9frA=="
+  "resolved" "https://registry.npmjs.org/nodemailer-wellknown/-/nodemailer-wellknown-0.1.8.tgz"
+  "version" "0.1.8"
 
 "nodemailer@^6.9.1":
   "integrity" "sha512-qHw7dOiU5UKNnQpXktdgQ1d3OFgRAekuvbJLcdG5dnEo/GtcTHRYM7+UfJARdOFU9WUQO8OiIamgWPmiSFHYAA=="
@@ -3081,13 +3068,12 @@
   "resolved" "https://registry.npmjs.org/smart-buffer/-/smart-buffer-4.2.0.tgz"
   "version" "4.2.0"
 
-"smtp-connection@2.12.0":
-  "integrity" "sha512-UP5jK4s5SGcUcqPN4U9ingqKt9mXYSKa52YhqxPuMecAnUOsVJpOmtgGaOm1urUBJZlzDt1M9WhZZkgbhxQlvg=="
-  "resolved" "https://registry.npmjs.org/smtp-connection/-/smtp-connection-2.12.0.tgz"
-  "version" "2.12.0"
+"smtp-connection@2.3.2":
+  "integrity" "sha512-ORefDrSgddCYkJE7oH3jB6WRv2Z7laZLCMRYD4GFFB8oaZw/hnil7exDBP4yBYs3OgschOuvVdCauUQAblTWvQ=="
+  "resolved" "https://registry.npmjs.org/smtp-connection/-/smtp-connection-2.3.2.tgz"
+  "version" "2.3.2"
   dependencies:
-    "httpntlm" "1.6.1"
-    "nodemailer-shared" "1.1.0"
+    "nodemailer-shared" "1.0.4"
 
 "socks-proxy-agent@^6.0.0":
   "integrity" "sha512-a6KW9G+6B3nWZ1yB8G7pJwL3ggLy1uTzKAgCb7ttblwqdz9fMGJUuTy3uFzEP48FAs9FLILlmzDlE2JJhVQaXQ=="
@@ -3485,11 +3471,6 @@
   "integrity" "sha512-+A5Sja4HP1M08MaXya7p5LvjuM7K6q/2EaC0+iovj/wOcMsTzMvDFbasi/oSapiwOlt252IqsKqPjCl7huKS0A=="
   "resolved" "https://registry.npmjs.org/underscore/-/underscore-1.13.6.tgz"
   "version" "1.13.6"
-
-"underscore@~1.7.0":
-  "integrity" "sha512-cp0oQQyZhUM1kpJDLdGO1jPZHgS/MpzoWYfe9+CM2h/QGDZlqwT2T3YGukuBdaNJ/CAPoeyAZRRHz8JFo176vA=="
-  "resolved" "https://registry.npmjs.org/underscore/-/underscore-1.7.0.tgz"
-  "version" "1.7.0"
 
 "unique-filename@^1.1.1":
   "integrity" "sha512-Vmp0jIp2ln35UTXuryvjzkjGdRyf9b2lTXuSYUiPmzRcl3FDtYqAwOnTJkAngD9SWhnoJzDbTKwaOrZ+STtxNQ=="
