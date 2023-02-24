@@ -1,8 +1,10 @@
 import { LoginDto, ForgetPasswordDto, RecoverPasswordDto, RecoverPasswordTokenDto } from '@dtos/auth.dto';
 import { NextFunction, Request, Response } from 'express';
 import { AuthService } from '@services/auth.service';
+import { UserEntity } from '@/entities/users.entity';
 import { serializer } from '@/shared/serializer';
 import { UserDto } from '@/dtos/users.dto';
+import { JWT } from '@/lib/Jwt';
 
 class AuthController {
     authService = new AuthService();
@@ -17,6 +19,21 @@ class AuthController {
                 message: 'User succesfully logined !',
                 access_token: accessToken,
             });
+        } catch (error) {
+            next(error);
+        }
+    };
+
+    checktoken = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+        try {
+            const headers = req.headers;
+    
+            await this.authService.checktoken(headers)
+            
+            res.json({
+                status: 200,
+                message: 'next'
+            })
         } catch (error) {
             next(error);
         }
