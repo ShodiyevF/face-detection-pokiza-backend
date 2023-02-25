@@ -26,10 +26,7 @@ const authorizationMiddleware = async (req: Request, res: Response, next: NextFu
 
         req.reqUser = user;
 
-        res.json({
-            status: 200,
-            message: 'token successfully'
-        })
+        next()
     } catch (error) {
         next(error);
     }
